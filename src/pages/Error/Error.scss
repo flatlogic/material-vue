@@ -1,0 +1,46 @@
+@import "../../styles/app";
+
+.error-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary;
+  .logo-wrapper {
+    align-items: center;
+    margin-bottom: 30px;
+
+    .logo-title {
+      font-size: 32px;
+      font-weight: 500;
+      color: white;
+    }
+  }
+  .card {
+    padding: 0 50px;
+    background-color: white;
+    border-radius: 4px;
+    height: 680px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    .error-logo {
+      color: $primary;
+      font-size: 148px;
+      font-weight: 600;
+    }
+    .error-text {
+      color: $primary;
+      text-align: center;
+      font-size: $h3-font-size;
+    }
+    .error-subtext {
+      text-align: center;
+      color: $text-grey;
+      font-size: $h4-font-size;
+    }
+  }
+}

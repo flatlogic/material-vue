@@ -1,0 +1,71 @@
+@import "src/styles/variables";
+
+.v-navigation-drawer {
+  top: 64px!important;
+  height: calc(100vh - 64px)!important;
+
+  .v-navigation-drawer__content {
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $text-grey;
+      border-radius: 36px;
+      border: none;
+    }
+  }
+  .v-list-item:not(.v-list-item--active) {
+    .v-icon {
+      color: $text-grey;
+    }
+  }
+  .v-list-item--active {
+    .v-list-item__content {
+      .v-list-item__title {
+        color: $title-grey!important;
+      }
+    }
+  }
+
+  &.drawer-mini {
+    .v-list {
+      div, a {
+        &.v-list-item {
+          color: $text-color;
+          transition: 300ms all;
+          padding-left: $drawer-items-padding / 4;
+        }
+      }
+    }
+  }
+  .v-list {
+    div, a {
+      &.v-list-item {
+        padding-left: $drawer-items-padding;
+      }
+      a.v-list-item {
+        padding-left: $drawer-items-padding * 2;
+      }
+    }
+  }
+
+  .subheader {
+    color: $text-grey;
+    transition: 300ms all;
+  }
+  .hide {
+    opacity: 0;
+  }
+  .show {
+    opacity: 1;
+  }
+}
+
+.v-navigation-drawer--temporary.v-navigation-drawer--clipped {
+  z-index: 5;
+}
+
+

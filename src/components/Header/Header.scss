@@ -1,0 +1,19 @@
+@import "../../styles/app";
+
+.v-list {
+  .v-list-item:hover {
+    background-color: #F3F5FF;
+    &:before {
+      opacity: 0;
+    }
+
+  }
+  .v-list-item:hover .v-list-item__icon {
+    .v-icon {
+      color: rgba($primary, 0.8)!important;
+    }
+  }
+  .link-item {
+    cursor: pointer;
+  }
+}

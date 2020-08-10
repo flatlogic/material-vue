@@ -1,0 +1,50 @@
+@import "../../styles/app";
+
+.dashboard-page {
+  .page-title {
+    padding-bottom: 20px;
+    @include media-breakpoint-up(sm) {
+      padding-bottom: 0;
+    }
+  }
+  .apexcharts-legend-series {
+    padding: 2px 5px 3px;
+    display: flex;
+    align-items: center;
+    .apexcharts-legend-marker {
+      margin-right: 8px;
+    }
+  }
+  .main-chart-select {
+    margin-right: 10px;
+    fieldset {
+      border-width: 1px!important;
+      border-color: $text-grey!important;
+      color: $text-grey!important;
+    }
+    .v-select__selection {
+      color: $text-color!important;
+    }
+  }
+  .v-card {
+    .v-card__text {
+      .subtext {
+        font-size: 1.142rem;
+        font-weight: 400;
+        color: $title-grey;
+      }
+      .subtext-index {
+        font-size: 11px;
+        color: $text-color;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.v-menu__content {
+  box-shadow: $card-shadow!important;
+}
+.button-shadow {
+  box-shadow: $button-shadow;
+}

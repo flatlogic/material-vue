@@ -1,0 +1,21 @@
+@import '../../styles/app';
+
+.employee-list {
+  .v-card__title {
+    .v-input {
+      max-width: 45%;
+      @include media-breakpoint-up(md) {
+        max-width: 20%;
+      }
+    }
+  }
+
+  .v-data-table {
+    .v-text-field > .v-input__control > .v-input__slot {
+      &:after, &:before {
+        border: none !important;
+      }
+    }
+  }
+}
+

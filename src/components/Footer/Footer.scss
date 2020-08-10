@@ -1,0 +1,9 @@
+@import "../../styles/app";
+.v-footer {
+  .row {
+    justify-content: center;
+    @include media-breakpoint-up(sm) {
+      justify-content: space-between;
+    }
+  }
+}

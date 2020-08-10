@@ -1,0 +1,112 @@
+@import 'src/styles/variables';
+
+.notification-page {
+  .v-chip {
+    height: 45px;
+    .v-chip__content {
+      font-size: 14px;
+    }
+  }
+
+  .location-selector {
+    width: 100%;
+    height: 200px;
+    border: 1px dashed $primary;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .text-position {
+      text-align: center;
+      color: #c0caff;
+      font-size: 21px;
+      font-weight: 400;
+    }
+  }
+
+  .location-selector .bit {
+    background-color: #F3F5FF;
+    cursor: pointer;
+    position: absolute;
+    transition: 300ms all;
+    border: 1px dashed $primary;
+    &.active {
+      background-color: #c0caff;
+    }
+  }
+  .location-selector .bit.top.left {
+    height: 25%;
+    width: 30%;
+    top: 0;
+    left: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+  }
+  .location-selector .bit.top.center {
+    height: 25%;
+    width: 40%;
+    margin: 0 30%;
+    top: 0;
+    border-top: none;
+    border-right: none;
+  }
+  .location-selector .bit.top.right {
+    height: 25%;
+    width: 30%;
+    top: 0;
+    right: 0;
+    border-top: none;
+    border-right: none;
+  }
+
+  .location-selector .bit.bottom.left {
+    height: 25%;
+    width: 30%;
+    bottom: 0;
+    left: 0;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+
+  }
+  .location-selector .bit.bottom.center {
+    height: 25%;
+    width: 40%;
+    margin: 0 30%;
+    bottom: 0;
+    border-bottom: none;
+    border-right: none;
+  }
+  .location-selector .bit.bottom.right {
+    height: 25%;
+    width: 30%;
+    bottom: 0;
+    right: 0;
+    border-bottom: none;
+    border-right: none;
+  }
+
+
+
+
+
+  .action-buttons {
+    button {
+      box-shadow: $button-shadow;
+    }
+  }
+}
+
+.Vue-Toastification__container {
+  .Vue-Toastification__toast--info {
+    background-color: $primary!important;
+  }
+  .Vue-Toastification__toast--success {
+    background-color: $success!important;
+  }
+  .Vue-Toastification__toast--error {
+    background-color: $error!important;
+  }
+}

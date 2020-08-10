@@ -1,0 +1,114 @@
+
+.v-application {
+  .page-title {
+    font-size: 2.4rem;
+    color: $text-grey;
+    margin-bottom: 0;
+  }
+  .v-card {
+    box-shadow: $card-shadow!important;
+    .v-card__title p{
+      color: $card-title-color;
+      line-height: 1.33;
+      margin: 0;
+      font-size: 20px;
+      font-weight: 400;
+    }
+    .card-dark-grey {
+      color: $title-grey!important;
+    }
+    .card-light-grey {
+      color: $text-color!important;
+    }
+  }
+  .v-navigation-drawer {
+    .v-navigation-drawer__content {
+      .v-list {
+        .v-list-item--active {
+          background-color: #F3F5FF;
+          &:before {
+            opacity: 0;
+          }
+        }
+        .v-list-item:hover {
+          background-color: #F3F5FF;
+          &:before {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-size: $h1-font-size;
+    font-weight: 400;
+    margin-bottom: 16px;
+    line-height: 1;
+  }
+  h2 {
+    font-size: $h2-font-size;
+    font-weight: 400;
+    margin-bottom: 16px;
+    line-height: 1;
+  }
+  h3 {
+    font-size: $h3-font-size;
+    font-weight: 400;
+    margin-bottom: 16px;
+    line-height: 1;
+  }
+  h4 {
+    font-size: $h4-font-size;
+    font-weight: 400;
+    margin-bottom: 16px;
+    line-height: 1;
+  }
+  h5 {
+    font-size: $h5-font-size;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+  h6 {
+    font-size: $h6-font-size;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+}
+.mapContainer + footer.v-footer {
+  display: none;
+}
+
+
+.toasted-container {
+  .toasted {
+    height: 50px!important;
+    box-shadow: none;
+
+    &.default {
+      background: $primary!important;
+    }
+
+    &.error {
+      background: $error!important;
+    }
+
+    &.success {
+      background: $success!important;
+    }
+
+    &.info {
+      background-color: $primary!important;
+    }
+
+    &.warning {
+      background: $warning!important;
+    }
+
+    .action {
+      color: $text-color;
+    }
+  }
+}
+
+

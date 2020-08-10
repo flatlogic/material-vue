@@ -1,0 +1,64 @@
+@import "../../styles/app";
+
+.container {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  padding: 0;
+
+  .main-part {
+    width: 100%;
+    height: 100vh;
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        text-align: center;
+        font-family: "Roboto", sans-serif;
+        font-size: 84px;
+        color: white;
+        font-weight: 500;
+      }
+      .v-image {
+        margin-bottom: 32px;
+      }
+    }
+
+  }
+  .login-part {
+    width: 100%;
+    height: 100vh;
+    background-color: #F6F7FF;
+    .login-wrapper {
+      width: 320px;
+      height: 620px;
+      .login-slogan {
+        color: #4a4a4a;
+      }
+      .v-btn.google {
+        box-shadow: $card-shadow!important;
+      }
+      .v-tabs {
+        .v-tab {
+          font-size: 18px;
+        }
+        .v-item-group {
+          background-color: #F6F7FF;
+        }
+      }
+
+    }
+    .v-footer {
+      padding: 0;
+      margin: 0;
+      bottom: 50px;
+      background-color: #F6F7FF;
+    }
+  }
+}
+
