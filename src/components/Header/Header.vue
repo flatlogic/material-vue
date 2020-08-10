@@ -5,7 +5,7 @@
       color='primary'
       dark
     >
-    <v-btn icon class="mr-2" @click.stop="TOGGLE_DRAWER">
+    <v-btn icon class="mx-1" @click.stop="TOGGLE_DRAWER">
         <template v-if="DRAWER_STATE">
             <v-icon  style="font-size: 28px">mdi-arrow-left</v-icon>
         </template>
