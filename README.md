@@ -4,14 +4,14 @@ Free and open-source admin dashboard template built with Vue and Vuetify. Develo
 
 [View Demo](https://flatlogic.github.io/material-vue/) | [Download](https://github.com/flatlogic/material-vue.git) | [More templates](https://flatlogic.com/templates)
 
-[![image](https://user-images.githubusercontent.com/43149862/80715665-5d031c80-8aff-11ea-801b-dd22163b4874.png)](https://flatlogic.github.io/material-vue/)
+[![image](https://github.com/flatlogic/material-vue/blob/master/src/assets/screenshot/mainScreenshot.png)](https://flatlogic.github.io/material-vue/)
 
 ## Features
 
 Vue Material Admin is a great template to quick-start development of SAAS, CMS, IoT Dashboard, E-Commerce apps, etc  
 Lite version of a Vue Material Admin includes following features and pages:
 
-* Vuetify 2 & SCSS
+* Vuetify
 * Responsive layout
 * Vue Apex Charts
 * Simple login / logout 
