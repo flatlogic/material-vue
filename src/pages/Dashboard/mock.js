@@ -119,8 +119,8 @@ export default {
       labels: ["Group A", "Group B", "Group C", "Group D"],
       legend: {
         markers: {
-          width: 26,
-          height: 12,
+          width: 18,
+          height: 10,
           radius: 3
         }
       }

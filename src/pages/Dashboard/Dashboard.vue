@@ -205,9 +205,9 @@
                 </template>
                 <v-list>
                   <v-list-item
-                          v-for="(item, i) in mock.menu"
-                          :key="i"
-                          @click="() => {}"
+                      v-for="(item, i) in mock.menu"
+                      :key="i"
+                      @click="() => {}"
                   >
                     <v-list-item-title>{{ item }}</v-list-item-title>
                   </v-list-item>
@@ -217,7 +217,13 @@
             <v-card-text class="pa-5 pt-0">
               <v-row no-gutters>
                 <v-col >
-                  <ApexChart v-if="apexLoading" height="126" type="donut" :options="mock.apexPie.options" :series="generatePieSeries()"></ApexChart>
+                  <ApexChart
+                      v-if="apexLoading"
+                      height="122"
+                      type="donut"
+                      class="mt-1"
+                      :options="mock.apexPie.options"
+                      :series="generatePieSeries()"></ApexChart>
                 </v-col>
               </v-row>
             </v-card-text>
