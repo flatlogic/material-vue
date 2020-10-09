@@ -1,14 +1,14 @@
 <template>
   <v-container fluid>
     <div class="dashboard-page">
-      <v-row no-gutters class="d-flex justify-space-between mt-14 mb-6">
+      <v-row no-gutters class="d-flex justify-space-between mt-10 mb-6">
         <h1 class="page-title">Dashboard</h1>
         <v-menu offset-y>
           <template v-slot:activator="{ on, attrs }">
             <v-btn
               v-bind="attrs"
               v-on="on"
-              color="error"
+              color="secondary"
               class="text-capitalize button-shadow"
             >Latest Reports</v-btn>
           </template>
@@ -16,7 +16,7 @@
         </v-menu>
       </v-row>
       <v-row>
-        <v-col lg=3 sm=6 md=4 cols=12>
+        <v-col lg=3 sm=6 md=5 cols=12>
           <v-card class="mx-1 mb-1">
             <v-card-title class="pa-5 pb-3">
               <p>Visits Today</p>
@@ -72,7 +72,7 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col lg=3 sm=6 md=8 cols=12>
+        <v-col lg=3 sm=6 md=7 cols=12>
           <v-card class="mx-1 mb-1">
             <v-card-title class="pa-5 pb-3">
               <p>App Performance</p>
@@ -132,9 +132,9 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col lg=3 sm=6 md=8 cols=12>
+        <v-col lg=3 sm=6 md=7 cols=12>
           <v-card  class="mx-1 mb-1">
-            <v-card-title class="pa-5 pb-3">
+            <v-card-title class="pa-5 pb-3 pt-lg-3">
               <p>Server Overview</p>
               <v-spacer></v-spacer>
               <v-menu>
@@ -157,35 +157,35 @@
                 </v-list>
               </v-menu>
             </v-card-title>
-            <v-card-text class="pa-5 pt-0 pb-4">
+            <v-card-text class="pa-5 pt-0 pb-3">
               <v-row no-gutters>
-                <v-col cols="6" class="my-auto">
+                <v-col cols="6" md="5" lg="6" xl="4" class="my-auto">
                   <span>60% / 37°С / 3.3 Ghz</span>
                 </v-col>
-                <v-col cols="6">
+                <v-col cols="6" md="7" lg="6" xl="8">
                   <ApexChart v-if="apexLoading"  height="40" type="area" :options="mock.apexArea1.options" :series="mock.apexArea1.series"></ApexChart>
                 </v-col>
               </v-row>
               <v-row no-gutters class="my-2">
-                <v-col cols="6" class="my-auto">
+                <v-col cols="6" md="5" lg="6" xl="4" class="my-auto">
                   <span>54% / 31°С / 3.3 Ghz</span>
                 </v-col >
-                <v-col cols="6">
+                <v-col cols="6" md="7" lg="6" xl="8">
                   <ApexChart v-if="apexLoading" height="40" type="area" :options="mock.apexArea2.options" :series="mock.apexArea2.series"></ApexChart>
                 </v-col>
               </v-row>
               <v-row no-gutters>
-                <v-col cols="6" class="my-auto">
+                <v-col cols="6" md="5" lg="6" xl="4" class="my-auto">
                   <span>57% / 21°С / 3.3 Ghz</span>
                 </v-col>
-                <v-col cols="6">
+                <v-col cols="6" md="7" lg="6" xl="8">
                   <ApexChart v-if="apexLoading" height="40" type="area" :options="mock.apexArea3.options" :series="mock.apexArea3.series"></ApexChart>
                 </v-col>
               </v-row>
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col lg=3 sm=6 md=4 cols=12>
+        <v-col lg=3 sm=6 md=5 cols=12>
           <v-card  class="mx-1 mb-1">
             <v-card-title class="pa-5 pb-3">
               <p>Revenue Breakdown</p>

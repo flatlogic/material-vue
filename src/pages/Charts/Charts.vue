@@ -1,7 +1,20 @@
 <template>
   <v-container fluid>
     <div class="charts-page">
-      <h1 class="page-title mt-10 mb-6">Charts</h1>
+      <v-row no-gutters class="d-flex justify-space-between mt-10 mb-6">
+        <h1 class="page-title">Charts</h1>
+        <v-menu offset-y>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              v-bind="attrs"
+              v-on="on"
+              color="secondary"
+              class="text-capitalize button-shadow"
+            >Latest Reports</v-btn>
+          </template>
+
+        </v-menu>
+      </v-row>
       <v-row>
         <v-col cols="12" md="6">
           <v-card class="mx-1 mb-1">

@@ -23,8 +23,13 @@
               :items="mock.employeeTable.employee"
               :search="mock.employeeTable.search"
               item-key="name"
-              show-select
-            >
+              show-select>
+              <template #[`header.data-table-select`]>
+                <v-checkbox v-model="mock.employeeTable.selected" color="primary"></v-checkbox>
+              </template>
+              <template #[`item.data-table-select`]="item">
+                <v-checkbox :value="item.item.select" color="primary"></v-checkbox>
+              </template>
             </v-data-table>
           </v-card>
         </v-col>
@@ -38,8 +43,7 @@
                   <v-btn
                     icon
                     v-bind="attrs"
-                    v-on="on"
-                  >
+                    v-on="on">
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
                 </template>
@@ -47,8 +51,7 @@
                   <v-list-item
                     v-for="(item, i) in mock.menu"
                     :key="i"
-                    @click="() => {}"
-                  >
+                    @click="() => {}">
                     <v-list-item-title>{{ item }}</v-list-item-title>
                   </v-list-item>
                 </v-list>
@@ -122,8 +125,9 @@ export default {
     return {
       mock
     }
-  },
+  }
 }
+
 </script>
 
 <style src="./Basic.scss" lang="scss"></style>
