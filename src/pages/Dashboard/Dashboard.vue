@@ -9,10 +9,9 @@
               v-bind="attrs"
               v-on="on"
               color="secondary"
-              class="text-capitalize button-shadow"
+              class="text-capitalize button-shadow mr-1"
             >Latest Reports</v-btn>
           </template>
-
         </v-menu>
       </v-row>
       <v-row>
