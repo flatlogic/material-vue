@@ -16,6 +16,11 @@
         border: none !important;
       }
     }
+    .v-data-table__checkbox.v-simple-checkbox {
+      .v-icon.mdi-checkbox-marked {
+        color: $primary;
+      }
+    }
   }
 }
 

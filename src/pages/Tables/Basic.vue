@@ -24,12 +24,6 @@
               :search="mock.employeeTable.search"
               item-key="name"
               show-select>
-              <template #[`header.data-table-select`]>
-                <v-checkbox v-model="mock.employeeTable.selected" color="primary"></v-checkbox>
-              </template>
-              <template #[`item.data-table-select`]="item">
-                <v-checkbox :value="item.item.select" color="primary"></v-checkbox>
-              </template>
             </v-data-table>
           </v-card>
         </v-col>
