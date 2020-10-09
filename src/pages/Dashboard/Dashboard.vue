@@ -6,10 +6,10 @@
         <v-menu offset-y>
           <template v-slot:activator="{ on, attrs }">
             <v-btn
-                v-bind="attrs"
-                v-on="on"
-                color="error"
-                class="text-capitalize button-shadow"
+              v-bind="attrs"
+              v-on="on"
+              color="error"
+              class="text-capitalize button-shadow"
             >Latest Reports</v-btn>
           </template>
 
@@ -26,8 +26,7 @@
                   <v-btn
                     icon
                     v-bind="attrs"
-                    v-on="on"
-                  >
+                    v-on="on">
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
                 </template>
@@ -58,7 +57,7 @@
                 </v-col>
               </v-row>
               <v-row no-gutters class="justify-space-between pb-2">
-                <v-col cols="4" lg="5">
+                <v-col cols="5">
                   <div class="card-light-grey">Registrations</div>
                   <div class="text-h6 card-dark-grey font-weight-regular">860</div>
                 </v-col>
@@ -66,7 +65,7 @@
                   <div class="card-light-grey">Sign Out</div>
                   <div class="text-h6 card-dark-grey font-weight-regular">32</div>
                 </v-col>
-                <v-col cols="3">
+                <v-col cols="3" xl="2" offset-sm="1">
                   <div class="card-light-grey">Rate</div>
                   <div class=" text-h6 card-dark-grey font-weight-regular">3.25%</div>
                 </v-col>
@@ -144,8 +143,7 @@
                   <v-btn
                     icon
                     v-bind="attrs"
-                    v-on="on"
-                  >
+                    v-on="on">
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
                 </template>
@@ -160,21 +158,21 @@
                 </v-list>
               </v-menu>
             </v-card-title>
-            <v-card-text class="pa-5 pt-0">
+            <v-card-text class="pa-5 pt-0 pb-4">
               <v-row no-gutters>
                 <v-col cols="6" class="my-auto">
                   <span>60% / 37°С / 3.3 Ghz</span>
                 </v-col>
                 <v-col cols="6">
-                  <ApexChart v-if="apexLoading"  height="43" type="area" :options="mock.apexArea1.options" :series="mock.apexArea1.series"></ApexChart>
+                  <ApexChart v-if="apexLoading"  height="40" type="area" :options="mock.apexArea1.options" :series="mock.apexArea1.series"></ApexChart>
                 </v-col>
               </v-row>
-              <v-row no-gutters>
+              <v-row no-gutters class="my-2">
                 <v-col cols="6" class="my-auto">
                   <span>54% / 31°С / 3.3 Ghz</span>
                 </v-col >
                 <v-col cols="6">
-                  <ApexChart v-if="apexLoading" height="43" type="area" :options="mock.apexArea2.options" :series="mock.apexArea2.series"></ApexChart>
+                  <ApexChart v-if="apexLoading" height="40" type="area" :options="mock.apexArea2.options" :series="mock.apexArea2.series"></ApexChart>
                 </v-col>
               </v-row>
               <v-row no-gutters>
@@ -182,7 +180,7 @@
                   <span>57% / 21°С / 3.3 Ghz</span>
                 </v-col>
                 <v-col cols="6">
-                  <ApexChart v-if="apexLoading" height="43" type="area" :options="mock.apexArea3.options" :series="mock.apexArea3.series"></ApexChart>
+                  <ApexChart v-if="apexLoading" height="40" type="area" :options="mock.apexArea3.options" :series="mock.apexArea3.series"></ApexChart>
                 </v-col>
               </v-row>
             </v-card-text>
@@ -237,9 +235,9 @@
                     <p>Daily Line Chart</p>
                   </v-col>
                   <v-col sm="6" md="6" lg="5" class="d-none d-sm-flex align-center">
-                    <v-icon color="warning">mdi-circle-medium</v-icon><span class="card-dark-grey font-weight-regular" style="font-size: 18px">Tablet</span>
-                    <v-icon color="primary">mdi-circle-medium</v-icon><span class="card-dark-grey font-weight-regular" style="font-size: 18px">Mobile</span>
-                    <v-icon color="#B1BCFF">mdi-circle-medium</v-icon><span class="card-dark-grey font-weight-regular" style="font-size: 18px">Desktop</span>
+                    <v-icon size="18" color="warning">mdi-circle-medium</v-icon><span class="card-dark-grey font-weight-regular mr-3" style="font-size: 18px">Tablet</span>
+                    <v-icon size="18" color="primary">mdi-circle-medium</v-icon><span class="card-dark-grey font-weight-regular mr-3" style="font-size: 18px">Mobile</span>
+                    <v-icon size="18" color="#B1BCFF">mdi-circle-medium</v-icon><span class="card-dark-grey font-weight-regular" style="font-size: 18px">Desktop</span>
                   </v-col>
                   <v-col cols="5" sm="2" md="2" lg="1" offset-lg="1">
                     <v-menu>
