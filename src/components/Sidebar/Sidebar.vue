@@ -12,36 +12,33 @@
     <v-list>
       <template v-for="(item, i) in items">
         <v-row
-            v-if="item.heading"
-            :key="item.heading"
-            align="center"
-        >
-            <v-col cols="6">
-                <span
-                    style="padding-left: 32px"
-                    class="text-body-1 subheader"
-                    :class="(item.heading && DRAWER_STATE) ? 'show ' : 'hide'">
-                    {{ item.heading }}
-                </span>
-            </v-col>
-            <v-col
-                cols="6"
-                class="text-center"
-            >
-            </v-col>
+          v-if="item.heading"
+          :key="item.heading"
+          align="center">
+          <v-col cols="6">
+            <span
+                  style="padding-left: 32px"
+                  class="text-body-1 subheader"
+                  :class="(item.heading && DRAWER_STATE) ? 'show ' : 'hide'">
+                  {{ item.heading }}
+              </span>
+          </v-col>
+          <v-col
+            cols="6"
+            class="text-center">
+          </v-col>
         </v-row>
         <v-divider
-            v-else-if="item.divider"
-            :key="i"
-            dark
-            class="my-4"
+          v-else-if="item.divider"
+          :key="i"
+          dark
+          class="my-4"
         ></v-divider>
         <v-list-group
           color="primary"
           v-else-if="item.children && DRAWER_STATE"
           :key="item.title"
           v-model="item.model"
-          :to="item.children.link"
           append-icon="">
             <template v-slot:prependIcon>
               <v-icon size="28">mdi-image-filter-none</v-icon>
@@ -73,7 +70,7 @@
           color="primary"
           v-else
           :key="item.text"
-          :to="item.link == '#' ? '' : item.link"
+          :to="item.link === '#' ? null : item.link"
           link>
           <v-list-item-action>
             <v-icon
@@ -111,6 +108,7 @@ import {mapActions, mapState} from 'vuex'
           {
             title: 'UI Elements',
             icon: 'mdi-image-filter-none',
+            link: '/icons',
             model: false,
             children: [
               { title: 'Icons', icon: 'mdi-circle-small', link: '/icons'},
