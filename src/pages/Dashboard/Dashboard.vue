@@ -34,8 +34,7 @@
                   <v-list-item
                     v-for="(item, i) in mock.menu"
                     :key="i"
-                    @click="() => {}"
-                  >
+                    @click="() => {}">
                     <v-list-item-title >{{ item }}</v-list-item-title>
                   </v-list-item>
                 </v-list>
@@ -228,7 +227,7 @@
           </v-card>
         </v-col>
         <v-col cols=12>
-            <v-card class="mx-1 mb-1">
+          <v-card class="mx-1 mb-1">
               <v-card-title class="pa-4 pb-0">
                 <v-row no-gutters>
                   <v-col cols="7" sm="4" md="4" lg="5" class="d-flex align-center">
@@ -243,16 +242,16 @@
                     <v-menu>
                       <template v-slot:activator="{ on, attrs }">
                         <v-select
-                                class="main-chart-select"
-                                v-model="mainApexAreaSelect"
-                                v-bind="attrs"
-                                v-on="on"
-                                dense
-                                flat
-                                single-line
-                                hide-details
-                                :items="mock.select"
-                                outlined
+                          class="main-chart-select"
+                          v-model="mainApexAreaSelect"
+                          v-bind="attrs"
+                          v-on="on"
+                          dense
+                          flat
+                          single-line
+                          hide-details
+                          :items="mock.select"
+                          outlined
                         ></v-select>
                       </template>
                     </v-menu>
@@ -263,19 +262,19 @@
                 <v-row>
                   <v-col >
                     <ApexChart
-                        v-if="apexLoading"
-                        height="350"
-                        type="area"
-                        :options="mock.mainApexArea.options"
-                        :series="mainApexAreaSelect === 'Daily' ?
-                        mock.mainApexArea.series :mainApexAreaSelect === 'Weekly' ?
-                        mock.mainApexArea.series2 : mock.mainApexArea.series3"
+                      v-if="apexLoading"
+                      height="350"
+                      type="area"
+                      :options="mock.mainApexArea.options"
+                      :series="mainApexAreaSelect === 'Daily' ?
+                      mock.mainApexArea.series :mainApexAreaSelect === 'Weekly' ?
+                      mock.mainApexArea.series2 : mock.mainApexArea.series3"
                     ></ApexChart>
                   </v-col>
                 </v-row>
               </v-card-text>
             </v-card>
-          </v-col>
+        </v-col>
         <v-col lg=4 sm=6 cols=12>
           <v-card class="mx-1 mb-1">
             <v-card-title class="pa-5 pb-3">
@@ -451,7 +450,7 @@
           </v-card>
         </v-col>
         <v-col cols=12>
-          <v-card class="mx-1 mb-1">
+          <v-card class="support-requests mx-1 mb-1">
             <v-card-title class="pa-5 pb-0">
               <p>Support Requests</p>
               <v-spacer></v-spacer>
@@ -460,8 +459,7 @@
                   <v-btn
                     icon
                     v-bind="attrs"
-                    v-on="on"
-                  >
+                    v-on="on">
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
                 </template>
@@ -469,8 +467,7 @@
                   <v-list-item
                     v-for="(item, i) in mock.menu"
                     :key="i"
-                    @click="() => {}"
-                  >
+                    @click="() => {}">
                     <v-list-item-title>{{ item }}</v-list-item-title>
                   </v-list-item>
                 </v-list>

@@ -324,7 +324,7 @@ export default {
       },
       plotOptions: {
         bar: {
-          columnWidth: "40%",
+          columnWidth: "50%",
           distributed: true,
           endingShape: "rounded",
           startingShape: "rounded",
@@ -386,7 +386,7 @@ export default {
       },
       plotOptions: {
         bar: {
-          columnWidth: "35%",
+          columnWidth: "45%",
           distributed: true,
           endingShape: "rounded",
           startingShape: "rounded",
@@ -438,7 +438,7 @@ export default {
       }
     },
     series: [{
-      data: [70, 63, 84, 79, 70, 65, 80]
+      data: [30, 23, 54, 69, 40, 25, 60]
     }],
   },
   apexBar3: {
@@ -455,7 +455,7 @@ export default {
       },
       plotOptions: {
         bar: {
-          columnWidth: "35%",
+          columnWidth: "45%",
           distributed: true,
           endingShape: "rounded",
           startingShape: "rounded",
@@ -507,7 +507,7 @@ export default {
       }
     },
     series: [{
-      data: [70, 63, 84, 79, 70, 65, 80]
+      data: [60, 43, 24, 19, 30, 45, 60]
     }],
   }
 };
