@@ -5,10 +5,10 @@
       <v-card width="100%" class="d-flex flex-row mx-3">
        <v-row no-gutters>
          <v-col lg="4" cols=12>
-           <v-card-title class="pa-5 pb-3">
+           <v-card-title class="pa-6 pb-3">
              <p>Layout Options</p>
            </v-card-title>
-           <v-card-text class="pa-5 pt-0">
+           <v-card-text class="pa-6 pt-0">
              <p>There are few position options available for notifications. You can click any of them to change notifications position:</p>
              <div class="location-selector">
                <div class="bit top left" :class="position === 'top-left' ? 'active' : ''" @click="toggleLocation('top-left')"/>
@@ -22,10 +22,10 @@
            </v-card-text>
          </v-col>
          <v-col lg="4" cols=12>
-           <v-card-title class="pa-5 pb-3">
+           <v-card-title class="pa-6 pb-3">
              <p>Notifications Types</p>
            </v-card-title>
-           <v-card-text class="pa-5 pt-0">
+           <v-card-text class="pa-6 pt-0">
              <p>Different types of notifications for lost of use cases. Custom classes are also supported.</p>
              <v-row no-gutters class="action-buttons pb-6">
                <v-col cols="12">
@@ -54,10 +54,10 @@
            </v-card-text>
          </v-col>
          <v-col lg="4" cols=12>
-           <v-card-title class="pa-5 pb-3">
+           <v-card-title class="pa-6 pb-3">
              <p>Usage</p>
            </v-card-title>
-           <v-card-text class="pa-5 pt-0">
+           <v-card-text class="pa-6 pt-0">
              <p>Notifications are created with the help of <a href="https://maronato.github.io/vue-toastification/">vue-toastification</a></p>
              <v-row no-gutters class="">
                <v-col cols="12">
@@ -80,10 +80,10 @@ import "vue-toastification/dist/index.css";</span>
     <v-row>
       <v-col lg=4 md="12" cols=12>
         <v-card class="mx-1 mb-1">
-          <v-card-title class="pa-5 pb-0">
+          <v-card-title class="pa-6 pb-0">
             <p>Notification Types Examples</p>
           </v-card-title>
-          <v-card-text class="pa-5 pt-0">
+          <v-card-text class="pa-6 pt-0">
             <v-row no-gutters>
               <v-col cols="12">
                 <template v-for="item in notificationsType" >
@@ -104,10 +104,10 @@ import "vue-toastification/dist/index.css";</span>
       </v-col>
       <v-col lg=4 md="6" cols=12>
         <v-card class="mx-1 mb-1">
-          <v-card-title class="pa-5 pb-0">
+          <v-card-title class="pa-6 pb-0">
             <p>Notification Types Examples</p>
           </v-card-title>
-          <v-card-text class="pa-5 pt-0">
+          <v-card-text class="pa-6 pt-0">
             <v-row no-gutters>
               <v-col cols="12">
                 <template v-for="item in notificationsTypeLight" >
@@ -129,10 +129,10 @@ import "vue-toastification/dist/index.css";</span>
       </v-col>
       <v-col lg=4 md="6" cols=12>
         <v-card class="mx-1 mb-1">
-          <v-card-title class="pa-5 pb-0">
+          <v-card-title class="pa-6 pb-0">
             <p>Notification Types Examples</p>
           </v-card-title>
-          <v-card-text class="pa-5 pt-0">
+          <v-card-text class="pa-6 pt-0">
             <v-row no-gutters >
               <v-col cols="12">
                 <template v-for="item in notificationsTypeButton" >

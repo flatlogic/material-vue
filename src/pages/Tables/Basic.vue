@@ -5,7 +5,7 @@
       <v-row>
         <v-col cols="12">
           <v-card class="employee-list mb-1">
-            <v-card-title class="pa-5 pb-3">
+            <v-card-title class="pa-6 pb-3">
               <p>Employee List</p>
               <v-spacer></v-spacer>
               <v-text-field

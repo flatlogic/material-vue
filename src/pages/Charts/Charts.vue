@@ -18,7 +18,7 @@
       <v-row>
         <v-col cols="12" md="6">
           <v-card class="mx-1 mb-1">
-            <v-card-title class="pa-5 pb-3">
+            <v-card-title class="pa-6 pb-3">
               <p>Apex Line Chart</p>
               <v-spacer></v-spacer>
               <v-menu>
@@ -42,7 +42,7 @@
                 </v-list>
               </v-menu>
             </v-card-title>
-            <v-card-text class="pa-5 pt-0">
+            <v-card-text class="pa-6 pt-0">
               <v-row no-gutters>
                 <v-col cols="12">
                   <ApexChart
@@ -58,7 +58,7 @@
         </v-col>
         <v-col cols="12" md="6" >
           <v-card class="mx-1 mb-1">
-            <v-card-title class="pa-5 pb-3">
+            <v-card-title class="pa-6 pb-3">
               <p>Apex Heatmap Chart</p>
               <v-spacer></v-spacer>
               <v-menu>
@@ -82,7 +82,7 @@
                 </v-list>
               </v-menu>
             </v-card-title>
-            <v-card-text class="pa-5 pt-0">
+            <v-card-text class="pa-6 pt-0">
               <v-row no-gutters>
                 <v-col>
                   <ApexChart
@@ -98,7 +98,7 @@
         </v-col>
         <v-col cols="12" md="6" >
           <v-card class="mx-1 mb-1">
-            <v-card-title class="pa-5 pb-3">
+            <v-card-title class="pa-6 pb-3">
               <p>Apex Dashed Line Chart</p>
               <v-spacer></v-spacer>
               <v-menu>
@@ -122,7 +122,7 @@
                 </v-list>
               </v-menu>
             </v-card-title>
-            <v-card-text class="pa-5 pt-0 pb-0">
+            <v-card-text class="pa-6 pt-0 pb-0">
               <v-row no-gutters>
                 <v-col cols="12" class="my-auto">
                   <ApexChart
@@ -138,7 +138,7 @@
         </v-col>
         <v-col cols="12" md="6">
           <v-card class="mx-1 mb-1">
-            <v-card-title class="pa-5 pb-3">
+            <v-card-title class="pa-6 pb-3">
               <p>Apex Pie Chart</p>
               <v-spacer></v-spacer>
               <v-menu>
@@ -162,7 +162,7 @@
                 </v-list>
               </v-menu>
             </v-card-title>
-            <v-card-text class="pa-5 pt-0">
+            <v-card-text class="pa-6 pt-0">
               <v-row no-gutters>
                 <v-col cols="12" class="pb-7">
                   <ApexChart

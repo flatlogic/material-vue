@@ -380,7 +380,7 @@
         lastReports: [
           {title: 'Print PDF', icon: 'mdi-printer'},
           {title: 'Download', icon: 'mdi-download'},
-          {title: 'Sand by mail', icon: 'mdi-email'},
+          {title: 'Send by mail', icon: 'mdi-email'},
           {title: 'Share', icon: 'mdi-share-variant'}
         ],
       }

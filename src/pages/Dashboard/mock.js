@@ -118,11 +118,7 @@ export default {
       colors: [config.light.primary, config.light.secondary, config.light.success, config.light.warning],
       labels: ["Group A", "Group B", "Group C", "Group D"],
       legend: {
-        markers: {
-          width: 18,
-          height: 10,
-          radius: 3
-        }
+
       }
     },
     series: [400, 300, 300, 200],
@@ -234,7 +230,7 @@ export default {
         show: false
 
       },
-      colors: [config.light.warning, config.light.primary, '#F8F9FA'],
+      colors: [config.light.warning, config.light.primary, '#f3f5ff'],
       yaxis: {
         axisBorder: {
           show: true,

@@ -17,10 +17,10 @@
           align="center">
           <v-col cols="6">
             <span
-                  style="padding-left: 32px"
-                  class="text-body-1 subheader"
-                  :class="(item.heading && DRAWER_STATE) ? 'show ' : 'hide'">
-                  {{ item.heading }}
+              style="padding-left: 32px"
+              class="text-body-1 subheader"
+              :class="(item.heading && DRAWER_STATE) ? 'show ' : 'hide'">
+              {{ item.heading }}
               </span>
           </v-col>
           <v-col

@@ -4,10 +4,10 @@
     <v-row>
       <v-col lg=6 cols=12>
         <v-card class="mx-1 mb-1">
-          <v-card-title class="pa-5 pb-3">
+          <v-card-title class="pa-6 pb-3">
             <p>Headings</p>
           </v-card-title>
-          <v-card-text class="pa-5 pt-0">
+          <v-card-text class="pa-6 pt-0">
             <v-row no-gutters class="typography-widget pb-6">
               <v-col cols="12" class="card-dark-grey">
                 <h1>h1. Heading</h1>
@@ -23,10 +23,10 @@
       </v-col>
       <v-col lg=6 cols=12>
         <v-card class="mx-1 mb-1">
-          <v-card-title class="pa-5 pb-3">
+          <v-card-title class="pa-6 pb-3">
             <p>Typography Colors</p>
           </v-card-title>
-          <v-card-text class="pa-5 pt-0">
+          <v-card-text class="pa-6 pt-0">
             <v-row no-gutters class="typography-widget pb-6">
               <v-col cols="12" class="card-dark-grey">
                 <h1 class="primary--text">h1. Heading</h1>
@@ -44,10 +44,10 @@
     <v-row>
       <v-col lg=6 cols=12>
         <v-card class="mx-1 mb-1">
-          <v-card-title class="pa-5 pb-3">
+          <v-card-title class="pa-6 pb-3">
             <p>Basic Text Settings</p>
           </v-card-title>
-          <v-card-text class="pa-5 pt-0">
+          <v-card-text class="pa-6 pt-0">
             <v-row no-gutters class="typography-widget pb-6">
               <v-col cols="12" class="card-dark-grey">
                 <p class="font-weight-regular">Basic text</p>
@@ -65,10 +65,10 @@
       </v-col>
       <v-col lg=6 cols=12>
         <v-card class="mx-1 mb-1">
-          <v-card-title class="pa-5 pb-3">
+          <v-card-title class="pa-6 pb-3">
             <p>Text Size</p>
           </v-card-title>
-          <v-card-text class="pa-5 pt-0">
+          <v-card-text class="pa-6 pt-0">
             <v-row no-gutters class="typography-widget pb-6">
               <v-col cols="12" class="card-dark-grey">
                 <p class="text-caption">Heading Typography SM Font Size</p>
