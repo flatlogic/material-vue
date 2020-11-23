@@ -1,4 +1,9 @@
 # Changelog
+## [v1.0.2]
+
+ - Update dependencies
+ - Update footer on login page
+ 
 ## [v1.0.1]
 
  - Update dependencies

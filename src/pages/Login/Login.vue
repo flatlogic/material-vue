@@ -135,7 +135,7 @@
             </v-col>
             <v-col cols="12" class="d-flex justify-center">
               <v-footer>
-                <div class="primary--text">© 2014-2020 Flatlogic, LLC. All rights reserved.</div>
+                <div class="primary--text">© 2014-2020 <a href="https://flatlogic.com/" class="text-decoration-none">Flatlogic</a>, LLC. All rights reserved.</div>
               </v-footer>
             </v-col>
           </v-row>
