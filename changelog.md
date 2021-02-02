@@ -1,4 +1,9 @@
 # Changelog
+## [v1.0.3]
+
+- Update dependencies
+- Update login page
+
 ## [v1.0.2]
 
  - Update dependencies

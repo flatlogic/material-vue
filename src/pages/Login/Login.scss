@@ -1,5 +1,7 @@
 @import "../../styles/app";
-
+body {
+  background-color: #F6F7FF !important
+}
 .container {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   padding: 0;
@@ -34,9 +36,10 @@
     width: 100%;
     height: 100vh;
     background-color: #F6F7FF;
+    overflow-y: auto;
     .login-wrapper {
       width: 320px;
-      height: 620px;
+      height: auto;
       .login-slogan {
         color: #4a4a4a;
       }
@@ -54,11 +57,9 @@
 
     }
     .v-footer {
-      padding: 0;
-      margin: 0;
-      bottom: 50px;
+      position: absolute;
+      bottom: 0;
       background-color: #F6F7FF;
     }
   }
 }
-

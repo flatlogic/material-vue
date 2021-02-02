@@ -9,9 +9,9 @@
           </div>
         </v-col>
         <v-col cols="12" lg="5" class="login-part d-flex align-center justify-center">
-          <v-row no-gutters>
+          <v-row no-gutters class="align-start">
             <v-col cols="12" class="login-part d-flex align-center justify-center flex-column">
-              <div class="login-wrapper">
+              <div class="login-wrapper pt-md-4 pt-0">
                 <v-tabs grow>
                   <v-tabs-slider></v-tabs-slider>
                   <v-tab :href="`#tab-login`">
@@ -178,9 +178,6 @@
       }
     }
   }
-
-
-
 
 </script>
 
