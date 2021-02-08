@@ -74,6 +74,14 @@
     font-weight: 400;
     margin-bottom: 16px;
   }
+
+  .row {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  .no-gutters {
+    margin: 0;
+  }
 }
 .mapContainer + footer.v-footer {
   display: none;

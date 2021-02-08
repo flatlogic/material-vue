@@ -15,7 +15,7 @@
           v-if="item.heading"
           :key="item.heading"
           align="center">
-          <v-col cols="6">
+          <v-col cols="6" class="py-5">
             <span
               style="padding-left: 32px"
               class="text-body-1 subheader"

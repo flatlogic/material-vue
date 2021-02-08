@@ -231,7 +231,7 @@
           </v-card>
         </v-col>
         <v-col lg="3" sm="6" md="5" cols="12">
-          <v-card class="mx-1 mb-1">
+          <v-card class="mx-1 mb-1" style="height: 228px">
             <v-card-title class="flex-nowrap pa-6 pb-3">
               <p class="text-truncate">Revenue Breakdown</p>
               <v-spacer></v-spacer>
