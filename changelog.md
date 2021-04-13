@@ -1,4 +1,14 @@
 # Changelog
+## [v1.0.4] - 13/04/2021
+
+### Update dependencies
+    apexcharts: 3.24.0 -> 3.26.0
+    core-js: 3.8.3 -> 3.10.1
+    vue-apexcharts: 1.6.0 -> 1.6.1
+    vuetify: 2.4.3 -> 2.4.9
+### Fixed
+- Fix empty links 
+
 ## [v1.0.3]
 
 - Update dependencies
