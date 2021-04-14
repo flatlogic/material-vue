@@ -1,5 +1,5 @@
 # Changelog
-## [v1.0.4] - 13/04/2021
+## [v1.0.4] - 04/13/2021
 
 ### Update dependencies
     apexcharts: 3.24.0 -> 3.26.0
