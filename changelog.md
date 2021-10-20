@@ -1,4 +1,10 @@
 # Changelog
+
+## [v1.0.5]
+
+- Update dependencies
+- add link to generator in sidebar
+
 ## [v1.0.4] - 04/13/2021
 
 ### Update dependencies

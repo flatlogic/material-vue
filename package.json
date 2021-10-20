@@ -1,6 +1,6 @@
 {
   "name": "vue-material-admin",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

@@ -9,6 +9,11 @@
     :temporary="$vuetify.breakpoint.smAndDown"
     :mini-variant-width="sidebarMinWidth"
     :class="{'drawer-mini': !DRAWER_STATE}">
+
+    <div class="v-list">
+      <a class="v-list-item v-list-item--link grey--text text-sm-h6" href="https://flatlogic.com/generator">Generate App</a>
+    </div>
+
     <v-list>
       <template v-for="(item, i) in items">
         <v-row
