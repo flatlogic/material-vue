@@ -1,6 +1,6 @@
 # 🤘 Vue Material Admin 
 
-Free and open-source admin dashboard template built with Vue and Vuetify. Developed with ❤️ by [Flatlogic](https://flatlogic.com/). If you love our project please star ⭐️ our repo!
+Free and open-source template built with Vue and Vuetify. Developed with ❤️ by Flatlogic, exemplifies a modern approach to UI design for [business software](https://flatlogic.com/). This template provides developers with a robust foundation for creating responsive and visually appealing administrative interfaces, encouraging support through engagement with their repository.  If you love our project please star ⭐️ our repo!
 
 [View Demo](https://flatlogic.github.io/material-vue/) | [Download](https://github.com/flatlogic/material-vue.git) | [More templates](https://flatlogic.com/templates) | [Support forum](https://flatlogic.com/forum)
 
