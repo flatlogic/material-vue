@@ -24,6 +24,24 @@ test('login tabs, dashboard charts, table controls, notifications, sidebar and l
   await expect(page.getByText('Visits Today', { exact: true })).toHaveCSS('font-weight', '400')
   await expect(page.getByText('Visits Today', { exact: true })).toHaveCSS('color', 'rgb(110, 110, 110)')
   await expect(page.locator('.apexcharts-canvas').first()).toBeVisible()
+  const revenue = page.locator('.v-card').filter({ hasText: 'Revenue Breakdown' })
+  const legends = revenue.locator('.apexcharts-legend-series')
+  await expect(legends).toHaveCount(4)
+  for (const group of ['Group A', 'Group B', 'Group C', 'Group D']) {
+    const legend = legends.filter({ hasText: group })
+    const bounds = await legend.evaluate(el => {
+      const item = el.getBoundingClientRect()
+      const chart = el.closest('.apexcharts-canvas').getBoundingClientRect()
+      return { bottom: item.bottom, chartBottom: chart.bottom }
+    })
+    expect(bounds.bottom, `${group} must fit inside the chart`).toBeLessThanOrEqual(bounds.chartBottom)
+    const index = ['Group A', 'Group B', 'Group C', 'Group D'].indexOf(group)
+    const slice = revenue.locator(`.apexcharts-series[rel="${index + 1}"] path`).first()
+    await legend.click()
+    await expect(slice).toHaveAttribute('selected', 'true')
+    await legend.click()
+    await expect(slice).toHaveAttribute('selected', 'false')
+  }
   await page.waitForTimeout(1000)
   await page.screenshot({ path: 'test-results/dashboard.png', fullPage: false })
 

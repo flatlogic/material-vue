@@ -91,7 +91,7 @@ npm run build
 npm test
 ```
 
-The browser regression uses local Chrome against the production build. It covers both login tabs, dashboard charts, sidebar collapse and navigation, employee search/sorting/selection, notification placement, both icon sets and logout, plus a 390px mobile login/drawer/overflow check, and checks the configured brand color and card typography. It also checks browser console messages, uncaught errors, and missing local assets.
+The browser regression uses local Chrome against the production build. It covers both login tabs, dashboard charts, sidebar collapse and navigation, employee search/sorting/selection, notification placement, both icon sets and logout, plus a 390px mobile login/drawer/overflow check, and checks the configured brand color and card typography. All four revenue legend labels must fit inside the chart and select/deselect their pie slices. It also checks browser console messages, uncaught errors, and missing local assets.
 
 Existing pages, sample data, Options API components, theme values and demo login behavior remain in place. Vue 3 changes require updated Vuetify slots/props, table headers, tab windows and SCSS selectors. Vue 3 ApexCharts replaces the Vue 2 wrapper; the native Vuetify sparkline preserves the existing trend widget. Notification controls use Vue Toastification's current API. Google Maps uses the supported Vue 3 component with the existing configuration; live provider access is not part of the local regression. Roboto and Material Design icons are bundled locally rather than fetched from external font CDNs.
 

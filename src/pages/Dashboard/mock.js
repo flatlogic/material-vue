@@ -118,7 +118,7 @@ export default {
       colors: [config.light.primary, config.light.secondary, config.light.success, config.light.warning],
       labels: ["Group A", "Group B", "Group C", "Group D"],
       legend: {
-
+        itemMargin: { horizontal: 5, vertical: 0 }
       }
     },
     series: [400, 300, 300, 200],
