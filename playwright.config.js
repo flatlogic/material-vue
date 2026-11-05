@@ -10,7 +10,7 @@ export default defineConfig({
     trace: 'retain-on-failure'
   },
   webServer: {
-    command: 'npm run preview -- --host 127.0.0.1 --port 4412 --strictPort',
+    command: 'npm run preview -- --host 127.0.0.1 --port 4412 --strictPort --outDir ' + (process.env.PLAYWRIGHT_DOCS === '1' ? 'docs' : 'dist'),
     url: 'http://127.0.0.1:4412/material-vue/'
   }
 })
