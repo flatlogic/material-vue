@@ -29,11 +29,11 @@
           <v-card-text class="pa-6 pt-0">
             <v-row no-gutters class="typography-widget pb-6">
               <v-col cols="12" class="card-dark-grey">
-                <h1 class="primary--text">h1. Heading</h1>
-                <h2 class="success--text">h2. Heading</h2>
-                <h3 class="secondary--text">h3. Heading</h3>
+                <h1 class="text-primary">h1. Heading</h1>
+                <h2 class="text-success">h2. Heading</h2>
+                <h3 class="text-secondary">h3. Heading</h3>
                 <h4 class="warning--text">h4. Heading</h4>
-                <h5 class="primary--text">h5. Heading</h5>
+                <h5 class="text-primary">h5. Heading</h5>
                 <h6 class="info--text">h6. Heading</h6>
               </v-col>
             </v-row>

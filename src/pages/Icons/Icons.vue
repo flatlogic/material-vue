@@ -5,10 +5,10 @@
       <v-menu
           offset-y
       >
-        <template v-slot:activator="{ on, attrs }">
+        <template v-slot:activator="{ props }">
           <v-btn
-              v-bind="attrs"
-              v-on="on"
+              v-bind="props"
+
               color="error"
               class="text-capitalize button-shadow"
           >Actions</v-btn>
@@ -19,9 +19,9 @@
               v-for="(item, index) in lastReports"
               :key="index"
           >
-            <v-list-item-icon>
-              <v-icon v-text="item.icon"></v-icon>
-            </v-list-item-icon>
+            <template #prepend>
+              <v-icon>{{ item.icon }}</v-icon>
+            </template>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -29,25 +29,23 @@
     </v-row>
     <v-row>
       <v-col cols="12">
-        <v-tabs
-          light
-          centered
-          grow
-        >
-          <v-tabs-slider></v-tabs-slider>
+        <v-tabs v-model="iconsTab" align-tabs="center" grow>
+
 
           <v-tab
-               :href="`#tab-font-awesome`"
+               value="tab-font-awesome"
           >
             Font Awesome
           </v-tab>
           <v-tab
-            :href="`#tab-material-icons`"
+            value="tab-material-icons"
           >
             Material Icons
           </v-tab>
 
-          <v-tab-item
+          </v-tabs>
+          <v-tabs-window v-model="iconsTab">
+          <v-tabs-window-item
             :value="'tab-material-icons'"
           >
             <v-card
@@ -56,8 +54,8 @@
             >
               <v-card-text>
                 <v-row no-gutters>
-                  <template v-for="icon in materialIcons" >
-                    <v-col md="3" lg="2" sm="6" cols="12" :key="icon" class="mb-5">
+                  <template v-for="icon in materialIcons" :key="icon">
+                    <v-col md="3" lg="2" sm="6" cols="12" class="mb-5">
                       <v-icon class="mr-3"> {{ icon }} </v-icon>
                       <span> {{ icon }}</span>
                     </v-col>
@@ -65,8 +63,8 @@
                 </v-row>
               </v-card-text>
             </v-card>
-          </v-tab-item>
-          <v-tab-item
+          </v-tabs-window-item>
+          <v-tabs-window-item
             :value="'tab-font-awesome'"
           >
             <v-card
@@ -75,17 +73,17 @@
             >
               <v-card-text>
                 <v-row no-gutters>
-                  <template v-for="icon in fontAwesome" >
-                    <v-col md="3" lg="2" sm="6" cols="12" :key="icon" class="mb-5">
-                      <v-icon class="mr-3"> {{ toFontAwesomeText(icon) }} </v-icon>
+                  <template v-for="icon in fontAwesome" :key="icon">
+                    <v-col md="3" lg="2" sm="6" cols="12" class="mb-5">
+                      <i :class="toFontAwesomeText(icon)" class="fa mr-3" style="font-size: 24px" aria-hidden="true" />
                       <span> {{ icon }}</span>
                     </v-col>
                   </template>
                 </v-row>
               </v-card-text>
             </v-card>
-          </v-tab-item>
-        </v-tabs>
+          </v-tabs-window-item>
+        </v-tabs-window>
       </v-col>
     </v-row>
   </v-container>
@@ -95,6 +93,7 @@
   export default {
     data () {
       return {
+        iconsTab: 'tab-font-awesome',
         fontAwesome: [
           'Bed',
           'Bank',

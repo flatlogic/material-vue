@@ -11,7 +11,7 @@
 import config from '../../config';
 
 export default {
-  name: 'Search',
+  name: 'HeaderSearch',
   data(){
     return {
       config,

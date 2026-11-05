@@ -6,7 +6,7 @@
               v-for="link in links"
               :key="link.link"
               color="primary"
-              text
+              variant="text"
               :href="link.link"
               class="text-capitalize ml-1 font-weight-regular"
           >
@@ -21,6 +21,7 @@
                 class="mr-1"
                 :color=config.light.textColor
                 icon
+                variant="text"
         >
           <v-icon size="24px">{{ icon.icon }}</v-icon>
         </v-btn>
@@ -33,7 +34,7 @@
 import config from '../../config';
 
 export default {
-  name: 'Footer',
+  name: 'AppFooter',
 
   data: () => ({
     config,

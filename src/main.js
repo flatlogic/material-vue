@@ -1,24 +1,20 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+import 'vuetify/styles'
+import '@mdi/font/css/materialdesignicons.css'
+import '@fontsource/roboto/100.css'
+import '@fontsource/roboto/300.css'
+import '@fontsource/roboto/400.css'
+import '@fontsource/roboto/500.css'
+import '@fontsource/roboto/700.css'
+import '@fontsource/roboto/900.css'
+import Toast, { useToast } from 'vue-toastification'
+import 'vue-toastification/dist/index.css'
 import App from './App.vue'
-import router from './Routes'
-import store from './store/index'
-import vuetify from './plugins/vuetify'
-import * as VueGoogleMaps from 'vue2-google-maps';
-import Toast from "vue-toastification";
-import "vue-toastification/dist/index.css";
+import router from './Routes.js'
+import store from './store/index.js'
+import vuetify from './plugins/vuetify.js'
 
-Vue.use(Toast);
-
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: 'AIzaSyB7OXmzfQYua_1LEhRdqsoYzyJOPh9hGLg',
-  },
-});
-
-Vue.config.productionTip = false
-
-new Vue({
-  vuetify,
-  router,
-  render: h => h(App), store
-}).$mount('#app')
+const app = createApp(App)
+app.use(store).use(router).use(vuetify).use(Toast)
+app.config.globalProperties.$toast = useToast()
+app.mount('#app')

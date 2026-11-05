@@ -1,11 +1,10 @@
 <template>
   <v-app-bar
-    class="main-header"
+    class="main-header text-white"
     height="64"
-    fixed
     color='primary'
-    dark>
-    <v-btn icon class="mx-1" @click.stop="TOGGLE_DRAWER">
+    >
+    <v-btn variant="text" icon class="mx-1" @click.stop="TOGGLE_DRAWER">
       <template v-if="DRAWER_STATE">
         <v-icon  style="font-size: 28px">mdi-arrow-left</v-icon>
       </template>
@@ -18,26 +17,27 @@
     <v-btn
       href="https://flatlogic.com/templates/vue-material-template-full/demo"
       class="d-none d-sm-flex mr-5"
-      outlined
+      variant="outlined"
       color="error">
       Unlock Full Version</v-btn>
-    <Search />
+    <HeaderSearch />
 
     <v-menu
       offset-y
       bottom
       nudge-bottom="10"
       left>
-        <template v-slot:activator="{ on, attrs }">
+        <template v-slot:activator="{ props }">
           <v-btn
             @click="notificationsBadge ? notificationsBadge = !notificationsBadge : ''"
-            v-bind="attrs"
-            v-on="on"
+            v-bind="props"
+
             style="font-size: 28px"
             icon
+            variant="text"
             class="mr-2">
               <v-badge
-                :value="notificationsBadge"
+                :model-value="notificationsBadge"
                 color="error"
                 content="4"
                 overlap>
@@ -48,21 +48,19 @@
           </v-btn>
         </template>
         <v-list>
-          <v-list-item-group color="primary">
+          <v-list color="primary">
             <v-list-item
               v-for="(item, i) in notifications"
               :key="i">
-                <v-list-item-icon class="mr-4 mb-1">
+                <template #prepend><div class="mr-4 mb-1">
                   <v-icon
-                    :color="item.color"
-                    v-text="item.icon">
-                  </v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title v-text="item.text"></v-list-item-title>
-                </v-list-item-content>
+                    :color="item.color">{{ item.icon }}</v-icon>
+                </div></template>
+                <div class="v-list-item__content">
+                  <v-list-item-title>{{ item.text }}</v-list-item-title>
+                </div>
             </v-list-item>
-          </v-list-item-group>
+          </v-list>
         </v-list>
     </v-menu>
     <v-menu
@@ -71,16 +69,17 @@
       bottom
       nudge-bottom="10"
       left>
-      <template v-slot:activator="{ on, attrs }">
+      <template v-slot:activator="{ props }">
         <v-btn
           @click="messageBadge ? messageBadge = !messageBadge : ''"
-          v-bind="attrs"
-          v-on="on"
+          v-bind="props"
+
           style="font-size: 28px"
           icon
+          variant="text"
           class="mr-2">
           <v-badge
-              :value="messageBadge"
+              :model-value="messageBadge"
               color="warning"
               content="3"
               overlap>
@@ -92,32 +91,32 @@
         </v-btn>
       </template>
       <v-list>
-        <div class="text-h5 grey--text text--darken-3 px-4 pt-4">New Messages</div>
-        <div class="subtitle-2 error--text font-weight-regular px-4 pb-2 link-item">4 new Messages</div>
-        <v-list-item-group color="primary">
+        <div class="text-h5 text-grey text--darken-3 px-4 pt-4">New Messages</div>
+        <div class="subtitle-2 text-error font-weight-regular px-4 pb-2 link-item">4 new Messages</div>
+        <v-list color="primary">
           <v-list-item
             v-for="(item, i) in messages"
             :key="i">
-            <v-list-item-icon class="mr-4 mb-1 d-flex flex-column">
+            <template #prepend><div class="mr-4 mb-1 d-flex flex-column">
               <v-btn
-                fab
-                x-small
-                depressed
+                icon
+                size="x-small"
+                variant="flat"
                 :color="item.color">{{ item.text }}
               </v-btn>
               <div style="font-size: 11px">{{ item.time }}</div>
-            </v-list-item-icon>
+            </div></template>
             <v-list-item two-line >
-              <v-list-item-content style="width: 190px">
-                <v-list-item-title v-text="item.name" class="pb-2"></v-list-item-title>
-                <v-list-item-subtitle v-text="item.message" class="text-truncate"></v-list-item-subtitle>
-              </v-list-item-content>
+              <div class="v-list-item__content" style="width: 190px">
+                <v-list-item-title class="pb-2">{{ item.name }}</v-list-item-title>
+                <v-list-item-subtitle class="text-truncate">{{ item.message }}</v-list-item-subtitle>
+              </div>
             </v-list-item>
           </v-list-item>
-          </v-list-item-group>
+          </v-list>
         <div class="d-flex justify-center my-3">
             <v-btn
-              large
+              size="large"
               color="primary"
               rounded
               elevation="5"
@@ -134,40 +133,39 @@
       bottom
       left
       nudge-bottom="10">
-        <template v-slot:activator="{ on, attrs }">
+        <template v-slot:activator="{ props }">
           <v-btn
             class="mr-0"
             icon
-            v-bind="attrs"
-            v-on="on">
+            variant="text"
+            v-bind="props"
+            >
             <v-icon
               style="font-size: 28px"
               :color="config.light.iconColor">mdi-account</v-icon>
             </v-btn>
         </template>
         <v-list >
-          <div class="text-h5 grey--text text--darken-3 px-4 pt-4">John Smith</div>
-          <div class="subtitle-2 primary--text font-weight-regular px-4">Flatlogic.com</div>
-          <v-list-item-group color="primary">
+          <div class="text-h5 text-grey text--darken-3 px-4 pt-4">John Smith</div>
+          <div class="subtitle-2 text-primary font-weight-regular px-4">Flatlogic.com</div>
+          <v-list color="primary">
             <v-list-item
               v-for="(item, i) in account"
               :key="i">
-                <v-list-item-icon class="mr-4">
+                <template #prepend><div class="mr-4">
                   <v-icon
-                    :color="item.color"
-                    v-text="item.icon">
-                  </v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title :color='config.light.textColor' v-text="item.text"></v-list-item-title>
-                </v-list-item-content>
+                    :color="item.color">{{ item.icon }}</v-icon>
+                </div></template>
+                <div class="v-list-item__content">
+                  <v-list-item-title :color='config.light.textColor'>{{ item.text }}</v-list-item-title>
+                </div>
             </v-list-item>
-          </v-list-item-group>
+          </v-list>
           <div class="d-flex justify-center my-3">
             <v-btn
               width="80%"
-              large
-              outlined
+              size="large"
+              variant="outlined"
               color="primary"
               class="text-capitalize"
               @click="logOut">Sign Out
@@ -181,11 +179,11 @@
 <script>
 import {mapActions, mapState} from 'vuex'
   import config from '../../config';
-  import Search from "@/components/Search/Search";
+  import HeaderSearch from "@/components/Search/Search.vue";
 
   export default {
-    name: 'Header',
-    components: { Search },
+    name: 'AppHeader',
+    components: { HeaderSearch },
     data: () => ({
       config,
       searchCollapse: true,

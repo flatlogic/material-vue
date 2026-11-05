@@ -4,10 +4,10 @@
       <v-row no-gutters class="d-flex justify-space-between mt-10 mb-6">
         <h1 class="page-title">Charts</h1>
         <v-menu offset-y>
-          <template v-slot:activator="{ on, attrs }">
+          <template v-slot:activator="{ props }">
             <v-btn
-              v-bind="attrs"
-              v-on="on"
+              v-bind="props"
+
               color="secondary"
               class="text-capitalize button-shadow"
             >Latest Reports</v-btn>
@@ -22,11 +22,12 @@
               <p>Apex Line Chart</p>
               <v-spacer></v-spacer>
               <v-menu>
-                <template v-slot:activator="{ on, attrs }">
+                <template v-slot:activator="{ props }">
                   <v-btn
                     icon
-                    v-bind="attrs"
-                    v-on="on"
+                    variant="text"
+                    v-bind="props"
+
                   >
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
@@ -62,11 +63,12 @@
               <p>Apex Heatmap Chart</p>
               <v-spacer></v-spacer>
               <v-menu>
-                <template v-slot:activator="{ on, attrs }">
+                <template v-slot:activator="{ props }">
                   <v-btn
                           icon
-                          v-bind="attrs"
-                          v-on="on"
+                          variant="text"
+                          v-bind="props"
+
                   >
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
@@ -102,11 +104,12 @@
               <p>Apex Dashed Line Chart</p>
               <v-spacer></v-spacer>
               <v-menu>
-                <template v-slot:activator="{ on, attrs }">
+                <template v-slot:activator="{ props }">
                   <v-btn
                           icon
-                          v-bind="attrs"
-                          v-on="on"
+                          variant="text"
+                          v-bind="props"
+
                   >
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
@@ -142,11 +145,12 @@
               <p>Apex Pie Chart</p>
               <v-spacer></v-spacer>
               <v-menu>
-                <template v-slot:activator="{ on, attrs }">
+                <template v-slot:activator="{ props }">
                   <v-btn
                           icon
-                          v-bind="attrs"
-                          v-on="on"
+                          variant="text"
+                          v-bind="props"
+
                   >
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
@@ -167,7 +171,7 @@
                 <v-col cols="12" class="pb-7">
                   <ApexChart
                     type="donut"
-                    :height="$vuetify.breakpoint.smAndDown ? 300 : 350"
+                    :height="$vuetify.display.smAndDown ? 300 : 350"
                     :options="apexPie.options"
                     :series="apexPie.series"
                   ></ApexChart>
@@ -182,7 +186,7 @@
 </template>
 
 <script>
-import ApexChart from 'vue-apexcharts'
+import ApexChart from 'vue3-apexcharts'
 import config from '../../config';
 
 export default {

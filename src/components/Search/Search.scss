@@ -1,7 +1,7 @@
 @import '../../styles/app';
 
 label {
-    @include media-breakpoint-up(md) {
+    @media (min-width: 960px) {
       display: inline-block;
     }
     display: none;

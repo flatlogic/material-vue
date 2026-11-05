@@ -1,4 +1,5 @@
 export default {
+    googleMapsKey: "AIzaSyB7OXmzfQYua_1LEhRdqsoYzyJOPh9hGLg",
     light: {
       primary: "#536DFE",
       secondary: "#FF5C93",

@@ -3,7 +3,7 @@
 .dashboard-page {
   .page-title {
     padding-bottom: 20px;
-    @include media-breakpoint-up(sm) {
+    @media (min-width: 600px) {
       padding-bottom: 0;
     }
   }
@@ -28,7 +28,7 @@
     }
   }
   .v-card {
-    .v-card__text {
+    .v-card-text {
       .subtext {
         font-size: 1.142rem;
         font-weight: 400;
@@ -42,7 +42,7 @@
     }
   }
   .support-requests {
-    .v-data-table__wrapper {
+    .v-table__wrapper {
       thead tr th {
         font-size: 1rem;
         font-weight: 500;
@@ -52,9 +52,9 @@
   }
 }
 
-.v-menu__content {
+.v-menu > .v-overlay__content {
   box-shadow: $card-shadow!important;
-  .v-list-item__content .v-list-item__title{
+  .v-list-item__content .v-list-item-title{
     font-size: 1rem;
     font-weight: 400;
   }

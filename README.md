@@ -42,15 +42,15 @@ git clone https://github.com/flatlogic/material-vue.git
 ```shell
 cd material-vue
 ```
-3. Install dependencies via npm or yarn
+3. Install the locked dependencies with npm
 ```shell
-yarn
+npm ci
 ```
 
 ## Quick start
 Run development server
 ```shell
-yarn serve
+npm run serve
 ```
 
 ## Support
@@ -79,3 +79,22 @@ Looking for premium themes and templates? Check out our other template at [flatl
 Flatlogic One React Template version is [MIT](https://github.com/flatlogic/one-react-template/blob/master/LICENCE)-licensed.
 
 * that's a joke actually, but we would really appreciate if you support us by buying a premium version. Anyways free is just free and is limited to only few components, while premium one has more and comes with premium support.
+
+## Dependency maintenance (2026-11-05)
+
+The supported stack is Vue 3, Vuetify 3, Vue Router 4, Vuex 4 and Vite. Use Node 22.12+ (verified with Node 22.23.0 and npm 10.9.8), a local Chrome installation, and the committed `package-lock.json` for reproducible installs. The old unlocked install failed an ApexCharts peer dependency check. The refreshed full npm graph, including development tools, reports 0 vulnerabilities without peer bypasses or dependency overrides.
+
+```sh
+npm ci
+npm run lint
+npm run build
+npm test
+```
+
+The browser regression uses local Chrome against the production build. It covers both login tabs, dashboard charts, sidebar collapse and navigation, employee search/sorting/selection, notification placement, both icon sets and logout, plus a 390px mobile login/drawer/overflow check, and checks the configured brand color and card typography. All four revenue legend labels must fit inside the chart and select/deselect their pie slices. It also checks browser console messages, uncaught errors, and missing local assets.
+
+Existing pages, sample data, Options API components, theme values and demo login behavior remain in place. Vue 3 changes require updated Vuetify slots/props, table headers, tab windows and SCSS selectors. Vue 3 ApexCharts replaces the Vue 2 wrapper; the native Vuetify sparkline preserves the existing trend widget. Notification controls use Vue Toastification's current API. Google Maps uses the supported Vue 3 component with the existing configuration; live provider access is not part of the local regression. Roboto and Material Design icons are bundled locally rather than fetched from external font CDNs.
+
+`npm run build` regenerates the tracked `dist/` artifact for the existing hosting workflow. The obsolete Vue 2 hashed bundles and source maps are removed by the clean Vite build; commit the refreshed output with source changes. Production retains the `/material-vue/` public path. No deployment is performed by the verification commands. Sass deprecation and large-bundle warnings remain visible during the build.
+
+Migration references: [Vue 3](https://v3-migration.vuejs.org/breaking-changes/), [Vuetify upgrade guide](https://vuetifyjs.com/en/getting-started/upgrade-guide/), [Vue Router migration](https://router.vuejs.org/guide/migration/), [Vite build](https://vite.dev/guide/build).
