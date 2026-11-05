@@ -2,7 +2,7 @@
 .v-footer {
   .row {
     justify-content: center;
-    @include media-breakpoint-up(sm) {
+    @media (min-width: 600px) {
       justify-content: space-between;
     }
   }

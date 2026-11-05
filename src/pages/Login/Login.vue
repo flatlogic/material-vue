@@ -12,21 +12,23 @@
           <v-row no-gutters class="align-start">
             <v-col cols="12" class="login-part d-flex align-center justify-center flex-column">
               <div class="login-wrapper pt-md-4 pt-0">
-                <v-tabs grow>
-                  <v-tabs-slider></v-tabs-slider>
-                  <v-tab :href="`#tab-login`">
+                <v-tabs v-model="authTab" grow>
+
+                  <v-tab value="tab-login">
                     LOGIN
                   </v-tab>
-                  <v-tab :href="`#tab-newUser`">
+                  <v-tab value="tab-newUser">
                     New User
                   </v-tab>
 
-                  <v-tab-item :value="'tab-login'" >
+                  </v-tabs>
+                <v-tabs-window v-model="authTab">
+                  <v-tabs-window-item value="tab-login">
                     <v-form>
                       <v-container>
                         <v-row class="flex-column">
                           <v-col>
-                            <p class="login-slogan display-2 text-center font-weight-medium my-10">Good Morning, User</p>
+                            <p class="login-slogan text-h3 text-center font-weight-medium my-10">Good Morning, User</p>
                             <v-btn height="45" block color="white" elevation="0" class="google text-capitalize">
                               <v-img src="@/assets/google.svg" max-width="30" class="mr-4"></v-img>
                               Sign in with Google</v-btn>
@@ -58,28 +60,28 @@
                             <v-col class="d-flex justify-space-between">
                               <v-btn
                                   class="text-capitalize"
-                                  large
+                                  size="large"
                                   :disabled="password.length === 0 || email.length === 0"
                                   color="primary"
                                   @click="login"
                               >
                                 Login</v-btn>
-                              <v-btn large text class="text-capitalize primary--text">Forget Password</v-btn>
+                              <v-btn size="large" variant="text" class="text-capitalize text-primary">Forget Password</v-btn>
                             </v-col>
                           </v-form>
                         </v-row>
                       </v-container>
                     </v-form>
-                  </v-tab-item>
+                  </v-tabs-window-item>
 
-                  <v-tab-item :value="'tab-newUser'" >
+                  <v-tabs-window-item value="tab-newUser">
                     <v-form>
                       <v-container>
                         <v-row class="flex-column">
 
                           <v-col>
-                            <p class="login-slogan display-2 text-center font-weight-medium mt-10">Welcome!</p>
-                            <p class="login-slogan display-1 text-center font-weight-medium mb-10">Create your account</p>
+                            <p class="login-slogan text-h3 text-center font-weight-medium mt-10">Welcome!</p>
+                            <p class="login-slogan text-h4 text-center font-weight-medium mb-10">Create your account</p>
                           </v-col>
 
                           <v-form>
@@ -106,7 +108,7 @@
                             </v-col>
                             <v-col class="d-flex justify-space-between">
                               <v-btn
-                                  large
+                                  size="large"
                                   block
                                   :disabled="createFullName.length === 0 || createEmail.length === 0 || createPassword === 0"
                                   color="primary"
@@ -128,14 +130,14 @@
                         </v-row>
                       </v-container>
                     </v-form>
-                  </v-tab-item>
+                  </v-tabs-window-item>
 
-                </v-tabs>
+                </v-tabs-window>
               </div>
             </v-col>
             <v-col cols="12" class="d-flex justify-center">
               <v-footer>
-                <div class="primary--text">© 2014-2020 <a href="https://flatlogic.com/" class="text-decoration-none">Flatlogic</a>, LLC. All rights reserved.</div>
+                <div class="text-primary">© 2014-2020 <a href="https://flatlogic.com/" class="text-decoration-none">Flatlogic</a>, LLC. All rights reserved.</div>
               </v-footer>
             </v-col>
           </v-row>
@@ -151,6 +153,7 @@
     name: 'Login',
     data() {
       return {
+        authTab: 'tab-login',
         email: 'admin@flatlogic.com',
         emailRules: [
           v => !!v || 'E-mail is required',

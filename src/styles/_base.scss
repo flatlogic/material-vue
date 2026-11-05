@@ -7,7 +7,11 @@
   }
   .v-card {
     box-shadow: $card-shadow!important;
-    .v-card__title p{
+    .v-card-title {
+      display: flex;
+      align-items: center;
+    }
+    .v-card-title p{
       color: $card-title-color;
       line-height: 1.33;
       margin: 0;

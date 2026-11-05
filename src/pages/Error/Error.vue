@@ -15,7 +15,7 @@
             <v-btn
                 class="text-capitalize"
                 dark
-                x-large
+                size="x-large"
                 :color="config.light.primary"
                 to="dashboard"
             >

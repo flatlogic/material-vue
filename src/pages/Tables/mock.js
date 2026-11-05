@@ -4,14 +4,14 @@ export default {
         search: '',
         headers: [
             {
-                text: 'Name',
+                title: 'Name',
                 align: 'start',
                 sortable: true,
-                value: 'name',
+                key: 'name',
             },
-            { text: 'Company', value: 'company' },
-            { text: 'City', value: 'city' },
-            { text: 'State', value: 'state' },
+            { title: 'Company', key: 'company' },
+            { title: 'City', key: 'city' },
+            { title: 'State', key: 'state' },
         ],
         employee: [
             {

@@ -4,10 +4,10 @@
       <v-row no-gutters class="d-flex justify-space-between mt-10 mb-6">
         <h1 class="page-title">Dashboard</h1>
         <v-menu offset-y>
-          <template v-slot:activator="{ on, attrs }">
+          <template v-slot:activator="{ props }">
             <v-btn
-              v-bind="attrs"
-              v-on="on"
+              v-bind="props"
+
               color="secondary"
               class="text-capitalize button-shadow mr-1"
               >Latest Reports</v-btn
@@ -22,8 +22,8 @@
               <p>Visits Today</p>
               <v-spacer></v-spacer>
               <v-menu>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn icon v-bind="attrs" v-on="on">
+                <template v-slot:activator="{ props }">
+                  <v-btn variant="text" icon v-bind="props" >
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
                 </template>
@@ -49,10 +49,10 @@
                 </v-col>
                 <v-col cols="6">
                   <Trend
-                    :data="getRandomDataForTrends()"
+                    :model-value="getRandomDataForTrends()"
                     :gradient="mock.trend.gradient"
                     :height="40"
-                    stroke-width="4"
+                    line-width="4"
                     smooth
                   />
                 </v-col>
@@ -88,8 +88,8 @@
               <p>App Performance</p>
               <v-spacer></v-spacer>
               <v-menu>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn icon v-bind="attrs" v-on="on">
+                <template v-slot:activator="{ props }">
+                  <v-btn variant="text" icon v-bind="props" >
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
                 </template>
@@ -123,8 +123,8 @@
                     Integration
                   </div>
                   <v-progress-linear
-                    :value="value"
-                    background-color="#ececec"
+                    :model-value="value"
+                    bg-color="#ececec"
                     color="primary"
                   ></v-progress-linear>
                 </v-col>
@@ -135,8 +135,8 @@
                     SDK
                   </div>
                   <v-progress-linear
-                    :value="value2"
-                    background-color="#ececec"
+                    :model-value="value2"
+                    bg-color="#ececec"
                     color="warning"
                   ></v-progress-linear>
                 </v-col>
@@ -150,8 +150,8 @@
               <p>Server Overview</p>
               <v-spacer></v-spacer>
               <v-menu>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn icon v-bind="attrs" v-on="on">
+                <template v-slot:activator="{ props }">
+                  <v-btn variant="text" icon v-bind="props" >
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
                 </template>
@@ -236,8 +236,8 @@
               <p class="text-truncate">Revenue Breakdown</p>
               <v-spacer></v-spacer>
               <v-menu>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn icon v-bind="attrs" v-on="on">
+                <template v-slot:activator="{ props }">
+                  <v-btn variant="text" icon v-bind="props" >
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
                 </template>
@@ -307,18 +307,18 @@
                 </v-col>
                 <v-col cols="5" sm="2" md="2" lg="1" offset-lg="1">
                   <v-menu>
-                    <template v-slot:activator="{ on, attrs }">
+                    <template v-slot:activator="{ props }">
                       <v-select
                         class="main-chart-select"
                         v-model="mainApexAreaSelect"
-                        v-bind="attrs"
-                        v-on="on"
-                        dense
+                        v-bind="props"
+
+                        density="compact"
                         flat
                         single-line
                         hide-details
                         :items="mock.select"
-                        outlined
+                        variant="outlined"
                       ></v-select>
                     </template>
                   </v-menu>
@@ -352,8 +352,8 @@
               <p>Light Blue</p>
               <v-spacer></v-spacer>
               <v-menu>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn icon v-bind="attrs" v-on="on">
+                <template v-slot:activator="{ props }">
+                  <v-btn variant="text" icon v-bind="props" >
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
                 </template>
@@ -372,7 +372,7 @@
               <v-row no-gutters>
                 <v-col cols="6" class="my-auto">
                   <span class="" style="font-size: 42px"
-                    >199 <span class="caption error--text">-3.7%</span>
+                    >199 <span class="caption text-error">-3.7%</span>
                   </span>
                 </v-col>
                 <v-col cols="6">
@@ -414,8 +414,8 @@
               <p>Sing App</p>
               <v-spacer></v-spacer>
               <v-menu>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn icon v-bind="attrs" v-on="on">
+                <template v-slot:activator="{ props }">
+                  <v-btn variant="text" icon v-bind="props" >
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
                 </template>
@@ -434,7 +434,7 @@
               <v-row no-gutters>
                 <v-col cols="7" class="my-auto">
                   <span class="" style="font-size: 42px"
-                    >121 <span class="error--text caption">-3.2%</span>
+                    >121 <span class="text-error caption">-3.2%</span>
                   </span>
                 </v-col>
                 <v-col cols="5">
@@ -476,8 +476,8 @@
               <p>RNS</p>
               <v-spacer></v-spacer>
               <v-menu>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn icon v-bind="attrs" v-on="on">
+                <template v-slot:activator="{ props }">
+                  <v-btn variant="text" icon v-bind="props" >
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
                 </template>
@@ -496,7 +496,7 @@
               <v-row no-gutters>
                 <v-col cols="7" class="my-auto">
                   <span class="" style="font-size: 42px"
-                    >175 <span class="error--text caption">-3.1%</span>
+                    >175 <span class="text-error caption">-3.1%</span>
                   </span>
                 </v-col>
                 <v-col cols="5">
@@ -538,8 +538,8 @@
               <p>Support Requests</p>
               <v-spacer></v-spacer>
               <v-menu>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn icon v-bind="attrs" v-on="on">
+                <template v-slot:activator="{ props }">
+                  <v-btn variant="text" icon v-bind="props" >
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
                 </template>
@@ -555,7 +555,7 @@
               </v-menu>
             </v-card-title>
             <v-card-text class="pa-0">
-              <v-simple-table>
+              <v-table>
                 <template v-slot:default>
                   <thead class="pl-2">
                     <tr>
@@ -594,7 +594,7 @@
                     </tr>
                   </tbody>
                 </template>
-              </v-simple-table>
+              </v-table>
             </v-card-text>
           </v-card>
         </v-col>
@@ -605,8 +605,8 @@
 
 <script>
 import mock from "./mock";
-import Trend from "vuetrend";
-import ApexChart from "vue-apexcharts";
+import { VSparkline as Trend } from "vuetify/components";
+import ApexChart from "vue3-apexcharts";
 
 export default {
   name: "Dashboard",

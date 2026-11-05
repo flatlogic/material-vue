@@ -22,7 +22,7 @@
               :headers="mock.employeeTable.headers"
               :items="mock.employeeTable.employee"
               :search="mock.employeeTable.search"
-              item-key="name"
+              item-value="name"
               show-select>
             </v-data-table>
           </v-card>
@@ -33,11 +33,12 @@
               <p>Material-UI Table</p>
               <v-spacer></v-spacer>
               <v-menu>
-                <template v-slot:activator="{ on, attrs }">
+                <template v-slot:activator="{ props }">
                   <v-btn
                     icon
-                    v-bind="attrs"
-                    v-on="on">
+                    variant="text"
+                    v-bind="props"
+                    >
                     <v-icon color="textColor">mdi-dots-vertical</v-icon>
                   </v-btn>
                 </template>
@@ -51,7 +52,7 @@
                 </v-list>
               </v-menu>
             </v-card-title>
-            <v-simple-table>
+            <v-table>
                 <template v-slot:default>
                   <thead>
                   <tr>
@@ -102,7 +103,7 @@
                   </tr>
                   </tbody>
                 </template>
-              </v-simple-table>
+              </v-table>
           </v-card>
         </v-col>
       </v-row>

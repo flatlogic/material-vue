@@ -65,10 +65,10 @@
 <span>import Toast from "vue-toastification";
 import "vue-toastification/dist/index.css";</span>
 
-<span>Vue.use(Toast)</span>
+<span>createApp(App).use(Toast)</span>
 
 <span>// you can call like this in your component</span>
-<span>this.$toast.show("I'm a toast!", {options})</span></pre>
+<span>this.$toast("I'm a toast!", {options})</span></pre>
                  <p class="pt-4">For more API information refer to the library documentation</p>
                </v-col>
              </v-row>
@@ -86,12 +86,11 @@ import "vue-toastification/dist/index.css";</span>
           <v-card-text class="pa-6 pt-0">
             <v-row no-gutters>
               <v-col cols="12">
-                <template v-for="item in notificationsType" >
+                <template v-for="item in notificationsType" :key="item.text">
                   <v-chip
-                    large
+                    size="large"
                     class="d-block mt-4"
                     :color="item.color"
-                    :key="item.text"
                   >
                     <v-icon left size="28" color="rgba(255,255,255, 0.5)" class="ml-0 mr-2">{{ item.icon }}</v-icon>
                     {{  item.text }}
@@ -110,13 +109,12 @@ import "vue-toastification/dist/index.css";</span>
           <v-card-text class="pa-6 pt-0">
             <v-row no-gutters>
               <v-col cols="12">
-                <template v-for="item in notificationsTypeLight" >
+                <template v-for="item in notificationsTypeLight" :key="item.text">
                   <v-chip
-                      large
+                      size="large"
                       text-color="black"
                       class="d-block mt-4 font-weight-regular"
                       :color="item.color"
-                      :key="item.text"
                   >
                     <v-icon :color="item.iconColor" left size="28" class="ml-0 mr-2">{{ item.icon }}</v-icon>
                     {{  item.text }}
@@ -135,14 +133,14 @@ import "vue-toastification/dist/index.css";</span>
           <v-card-text class="pa-6 pt-0">
             <v-row no-gutters >
               <v-col cols="12">
-                <template v-for="item in notificationsTypeButton" >
-                  <div :key="item.text" class="mt-4">
+                <template v-for="item in notificationsTypeButton" :key="item.text">
+                  <div class="mt-4">
                   <v-btn
-                    small
+                    size="small"
                     height="45"
                     width="45"
                     class="mr-2"
-                    fab
+                    icon
                     elevation="0"
                     :color="item.color"
                   >
@@ -323,8 +321,7 @@ export default {
 
     toggleLocation(position) {
       this.position = position;
-      this.$toasted.options.position = this.position;
-      this.$toasted.show(null);
+
     },
   }
 };

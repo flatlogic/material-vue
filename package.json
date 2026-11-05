@@ -3,58 +3,44 @@
   "version": "1.0.5",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "vite --port 3000",
+    "dev": "vite --port 3000",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src",
+    "test": "playwright test",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
-    "apexcharts": "^3.26.0",
-    "core-js": "^3.10.1",
-    "css-loader": "^4.3.0",
+    "@mdi/font": "^7.4.47",
+    "@fontsource/roboto": "^5.2.10",
+    "apexcharts": "^5.10.0",
     "font-awesome": "^4.7.0",
-    "highcharts": "^8.2.2",
-    "highcharts-vue": "^1.3.5",
-    "vue": "^2.6.12",
-    "vue-apexcharts": "^1.6.1",
-    "vue-router": "^3.5.1",
-    "vue-toastification": "^1.7.11",
-    "vue2-google-maps": "^0.10.7",
-    "vue2-perfect-scrollbar": "^1.5.0",
-    "vuetify": "^2.4.9",
-    "vuetrend": "^0.3.4",
-    "vuex": "^3.6.2"
+    "vue": "^3.5.45",
+    "vue3-apexcharts": "^1.11.1",
+    "vue-router": "^4.6.3",
+    "vue-toastification": "^2.0.0-rc.5",
+    "vue3-google-map": "^0.27.2",
+    "vuetify": "^3.13.7",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.7",
-    "@vue/cli-plugin-eslint": "~4.5.7",
-    "@vue/cli-service": "~4.5.7",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.10.0",
-    "eslint-plugin-vue": "^7.0.1",
-    "sass": "^1.27.0",
-    "sass-loader": "^10.0.3",
-    "vue-cli-plugin-vuetify": "~2.0.7",
-    "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.12",
-    "vuetify-loader": "^1.6.0"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {}
+    "@playwright/test": "^1.64.1",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.5",
+    "eslint-plugin-vue": "^10.5.1",
+    "globals": "^17.13.0",
+    "sass": "^1.107.0",
+    "vite": "^6.4.4"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
 }

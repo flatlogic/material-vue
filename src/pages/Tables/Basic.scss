@@ -1,10 +1,10 @@
 @import '../../styles/app';
 
 .employee-list {
-  .v-card__title {
+  .v-card-title {
     .v-input {
       max-width: 45%;
-      @include media-breakpoint-up(md) {
+      @media (min-width: 960px) {
         max-width: 20%;
       }
     }

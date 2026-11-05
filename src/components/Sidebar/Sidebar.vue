@@ -1,100 +1,37 @@
 <template>
   <v-navigation-drawer
-    app
-    clipped
     v-model="DRAWER_STATE"
-    :mini-variant="!DRAWER_STATE"
+    :rail="!DRAWER_STATE"
     :width="sidebarWidth"
-    :permanent="$vuetify.breakpoint.mdAndUp"
-    :temporary="$vuetify.breakpoint.smAndDown"
-    :mini-variant-width="sidebarMinWidth"
+    :permanent="$vuetify.display.mdAndUp"
+    :temporary="$vuetify.display.smAndDown"
+    :rail-width="sidebarMinWidth"
     :class="{'drawer-mini': !DRAWER_STATE}">
-
     <div class="v-list">
-      <a class="v-list-item v-list-item--link grey--text text-sm-h6" target="_blank" href="https://flatlogic.com/generator">Generate App</a>
+      <a class="v-list-item v-list-item--link text-grey text-sm-h6" target="_blank" href="https://flatlogic.com/generator">Generate App</a>
     </div>
-
     <v-list>
-      <template v-for="(item, i) in items">
-        <v-row
-          v-if="item.heading"
-          :key="item.heading"
-          align="center">
+      <template v-for="(item, i) in items" :key="item.title || item.heading || i">
+        <v-row v-if="item.heading" align="center">
           <v-col cols="6" class="py-5">
-            <span
-              style="padding-left: 32px"
-              class="text-body-1 subheader"
-              :class="(item.heading && DRAWER_STATE) ? 'show ' : 'hide'">
-              {{ item.heading }}
-              </span>
-          </v-col>
-          <v-col
-            cols="6"
-            class="text-center">
+            <span style="padding-left: 32px" class="text-body-1 subheader" :class="DRAWER_STATE ? 'show' : 'hide'">{{ item.heading }}</span>
           </v-col>
         </v-row>
-        <v-divider
-          v-else-if="item.divider"
-          :key="i"
-          dark
-          class="my-4"
-        ></v-divider>
-        <v-list-group
-          color="primary"
-          v-else-if="item.children && DRAWER_STATE"
-          :key="item.title"
-          v-model="item.model"
-          append-icon="">
-            <template v-slot:prependIcon>
-              <v-icon size="28">mdi-image-filter-none</v-icon>
-            </template>
-            <template v-slot:activator >
-              <v-list-item-content >
-                <v-list-item-title
-                  class="grey--text">
-                    {{ item.title }}
-                </v-list-item-title>
-              </v-list-item-content>
-            </template>
-            <v-list-item
-              v-for="(child, i) in item.children"
-              :key="i"
-              :to="child.link"
-              link>
-                <v-list-item-action v-if="child.icon">
-                  <v-icon size="">{{ child.icon }}</v-icon>
-                </v-list-item-action>
-                <v-list-item-content>
-                  <v-list-item-title class="grey--text">
-                    {{ child.title }}
-                  </v-list-item-title>
-                </v-list-item-content>
-            </v-list-item>
+        <v-divider v-else-if="item.divider" class="my-4" />
+        <v-list-group v-else-if="item.children && DRAWER_STATE" :value="item.title" color="primary">
+          <template #activator="{ props }">
+            <v-list-item v-bind="props" :title="item.title" :prepend-icon="item.icon" />
+          </template>
+          <v-list-item v-for="child in item.children" :key="child.title" :to="child.link" :title="child.title" :prepend-icon="child.icon" />
         </v-list-group>
-        <v-list-item
-          color="primary"
-          v-else
-          :key="item.text"
-          :href="item.href ? item.href : null"
-          :to="item.link === '#' ? null : item.link"
-          link>
-          <v-list-item-action>
-            <v-icon
-              size="28"
-              :color="item.color ? item.color : ''"
-            >{{ item.icon }}</v-icon>
-          </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title
-                class="grey--text"
-                link>
-                {{ item.title }}
-              </v-list-item-title>
-            </v-list-item-content>
+        <v-list-item v-else color="primary" :href="item.href" :to="item.link === '#' ? null : item.link" :title="item.title">
+          <template #prepend>
+            <v-icon size="28" :color="item.color || ''">{{ item.icon }}</v-icon>
+          </template>
         </v-list-item>
       </template>
     </v-list>
-    </v-navigation-drawer>
+  </v-navigation-drawer>
 </template>
 
 <script>
